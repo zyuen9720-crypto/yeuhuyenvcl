@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Món quà cho Huyền 💜</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:'Segoe UI',sans-serif;
+
+background:linear-gradient(135deg,#ffd6ec,#f3c6ff,#e5c9ff);
+
+overflow:hidden;
+}
+
+/* hộp quà */
+
+.gift{
+font-size:120px;
+cursor:pointer;
+transition:transform 0.3s;
+}
+
+.gift:hover{
+transform:scale(1.1);
+}
+
+/* nội dung sau khi mở */
+
+.message{
+display:none;
+
+max-width:700px;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+
+text-align:center;
+
+animation:fade 2s;
+}
+
+h1{
+color:#c05cff;
+}
+
+p{
+font-size:18px;
+line-height:1.7;
+color:#555;
+}
+
+.heart{
+font-size:40px;
+animation:beat 1s infinite;
+}
+
+/* animation */
+
+@keyframes beat{
+0%{transform:scale(1)}
+50%{transform:scale(1.2)}
+100%{transform:scale(1)}
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+/* tim bay */
+
+.floating span{
+
+position:absolute;
+
+font-size:22px;
+
+animation:float 7s linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-10vh);
+opacity:0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="gift" class="gift">🎁</div>
+
+<div id="message" class="message">
+
+<h1>Happy Women's Day 💜</h1>
+
+<p>
+Bé iu ơi hôm nay là ngày quốc tế phụ nữ, em từng nói với anh em chưa được gọi là “người phụ nữ”
+nhưng em vẫn sẽ luôn là người phụ nữ mà anh quyết định phải giữ lấy thật chặt.
+</p>
+
+<p>
+Anh không có bó hoa nào đẹp và tươi tắn hơn sự xuất hiện của em trong cuộc đời anh.
+</p>
+
+<p>
+Chúc Huyền của anh ngày 8/3 thật hạnh phúc, mãi xinh đẹp và có thật nhiều may mắn.
+</p>
+
+<p>
+Cùng anh đồng hành qua nhiều thử thách phía trước nhé ạ 💜
+</p>
+
+<div class="heart">💗</div>
+
+</div>
+
+<div class="floating">
+<span style="left:10%">💗</span>
+<span style="left:20%">💜</span>
+<span style="left:35%">💗</span>
+<span style="left:50%">💜</span>
+<span style="left:65%">💗</span>
+<span style="left:80%">💗</span>
+<span style="left:90%">💜</span>
+</div>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+let gift=document.getElementById("gift");
+let message=document.getElementById("message");
+let music=document.getElementById("music");
+
+gift.onclick=function(){
+
+gift.style.display="none";
+
+message.style.display="block";
+
+music.play();
+
+}
+
+</script>
+
+</body>
+</html>
