@@ -108,7 +108,18 @@ opacity:0;
 }
 
 }
+.typing {
+overflow: hidden;
+white-space: nowrap;
+border-right: 3px solid pink;
+width: 0;
+animation: typing 6s steps(80,end) forwards;
+}
 
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
 </style>
 </head>
 
@@ -120,20 +131,20 @@ opacity:0;
 
 <h1>Happy Women's Day 💜</h1>
 
-<p>
+<p class="typing">
 Bé iu ơi hôm nay là ngày quốc tế phụ nữ, em từng nói với anh em chưa được gọi là “người phụ nữ”
 nhưng em vẫn sẽ luôn là người phụ nữ mà anh quyết định phải giữ lấy thật chặt.
 </p>
 
-<p>
+<p class="typing">
 Anh không có bó hoa nào đẹp và tươi tắn hơn sự xuất hiện của em trong cuộc đời anh.
 </p>
 
-<p>
+<p class="typing">
 Chúc Huyền của anh ngày 8/3 thật hạnh phúc, mãi xinh đẹp và có thật nhiều may mắn.
 </p>
 
-<p>
+<p class="typing">
 Cùng anh đồng hành qua nhiều thử thách phía trước nhé ạ 💜
 </p>
 
